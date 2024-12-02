@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Breadcrumbs = ({ title }) => {
   return (
     <div
@@ -11,13 +13,13 @@ export const Breadcrumbs = ({ title }) => {
       <div className="container flex flex-col items-center justify-center gap-4 p-8 mx-auto">
         <h1 className="text-3xl font-bold text-white">{title}</h1>
         <nav className="flex space-x-2 text-white breadcrumb">
-          <a href="/" className="breadcrumb-item">
+          <Link href="/" className="breadcrumb-item">
             Home
-          </a>
+          </Link>
           <span className="breadcrumb-separator">/</span>
-          <a href={"#"} className="breadcrumb-item">
+          <Link href={"#"} className="breadcrumb-item">
             {title}
-          </a>
+          </Link>
         </nav>
       </div>
     </div>

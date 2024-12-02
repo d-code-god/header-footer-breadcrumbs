@@ -8,6 +8,7 @@ import { IoLocation } from "react-icons/io5";
 import { IoMdCall } from "react-icons/io";
 import { FaEnvelope } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -47,42 +48,42 @@ export const Footer = () => {
           <div className="">
             <div className="flex items-center gap-4 mb-4">
               <FaAngleRight />{" "}
-              <a
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 HOME
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-4 mb-4">
               {" "}
               <FaAngleRight />{" "}
-              <a
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 PROFILES
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-4 mb-4">
               {" "}
               <FaAngleRight />{" "}
-              <a
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 BATCHES
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-4 mb-4">
               {" "}
               <FaAngleRight />{" "}
-              <a
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 COURSES
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -92,43 +93,43 @@ export const Footer = () => {
           <div className="">
             <div className="flex items-center gap-4 mb-4">
               <FaAngleRight />{" "}
-              <a
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 SOFTWARE ENGINEERING
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-4 mb-4">
               {" "}
               <FaAngleRight />{" "}
-              <a
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 DIGITAL MARKETING{" "}
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-4 mb-4">
               {" "}
-              <FaAngleRight />{" "}
-              <a
+              Link <FaAngleRight />{" "}
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 DATA ANALYSIS
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-4 mb-4">
               {" "}
               <FaAngleRight />{" "}
-              <a
+              <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
               >
                 PHOTOGRAPHY
-              </a>
+              </Link>
             </div>
           </div>
         </div>

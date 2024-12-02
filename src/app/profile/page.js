@@ -10,13 +10,13 @@ function StudentProfile() {
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-3xl font-bold">Student Profile</h1>
             {/* <nav className="flex text-gray-600 breadcrumb">
-              <a href="#" className="breadcrumb-item">
+              <Link href="#" className="breadcrumb-item">
                 Dashboard
-              </a>
+              </Link>
               <span className="breadcrumb-separator">/</span>
-              <a href="#" className="breadcrumb-item">
+              <Link href="#" className="breadcrumb-item">
                 Students
-              </a>
+              </Link>
               <span className="breadcrumb-separator">/</span>
               <span className="breadcrumb-item">John Doe</span>
             </nav> */}

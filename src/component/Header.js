@@ -8,6 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 import { FaClock } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
+import Link from "next/link";
 
 import ThemeSwitcher from "./ThemeSwitcher";
 
@@ -35,27 +36,27 @@ export const Header = () => {
 
           <div className="flex items-center gap-6 bg-white dark:bg-gray-400 text-[#1c1c9e] dark:text-gray-900  hover:h-10 ">
             <div className="flex items-center justify-center w-6 h-8 pl-6 pr-6 border-r-2 border-[#1c1c9e] dark:border-gray-900">
-              <a href="">
+              <Link href="">
                 <FaFacebookF className="duration-300 hover:text-xl hover:ease-in-out" />
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center justify-center w-6 h-8 pr-6 border-r-2 border-[#1c1c9e] dark:border-gray-900">
-              <a href="">
+              <Link href="">
                 <FaTwitter className="duration-300 hover:text-xl hover:ease-in-out" />
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center justify-center w-6 h-8 pr-6 border-r-2 border-[#1c1c9e] dark:border-gray-900">
-              <a href="">
+              <Link href="">
                 <FaLinkedinIn className="duration-300 hover:text-xl hover:ease-in-out" />
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center justify-center w-6 h-8 pr-6">
-              <a href="" className="border-r-blue-200">
+              <Link href="" className="border-r-blue-200">
                 <FaSquareInstagram className="duration-300 hover:text-xl hover:ease-in-out" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -77,49 +78,49 @@ export const Header = () => {
           <ul className="flex justify-center gap-6">
             <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e]  dark:hover:border-gray-900 hover:duration-300 hover:h-12">
               <li>
-                <a href="/" className="font-semibold">
+                <Link href="/" className="font-semibold">
                   HOME
-                </a>
+                </Link>
               </li>
             </div>
 
             <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e] dark:hover:border-gray-900  hover:duration-300 hover:h-12">
               <li>
-                <a href="/about" className="font-semibold">
+                <Link href="/about" className="font-semibold">
                   ABOUT
-                </a>
+                </Link>
               </li>
             </div>
 
             <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e]  dark:hover:border-gray-900 hover:duration-300 hover:h-12">
               <li>
-                <a href="/courses" className="font-semibold">
+                <Link href="/courses" className="font-semibold">
                   COURSES
-                </a>
+                </Link>
               </li>
             </div>
 
             <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e] dark:hover:border-gray-900 hover:duration-300 hover:h-12">
               <li>
-                <a href="/batches" className="font-semibold">
+                <Link href="/batches" className="font-semibold">
                   BATCHES
-                </a>
+                </Link>
               </li>
             </div>
 
             <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e] dark:hover:border-gray-900 hover:duration-300 hover:h-12">
               <li>
-                <a href="/profile" className="font-semibold">
+                <Link href="/profile" className="font-semibold">
                   PROFILE
-                </a>
+                </Link>
               </li>
             </div>
 
             <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e]  dark:hover:border-gray-900 hover:duration-300 hover:h-12">
               <li>
-                <a href="/contact" className="font-semibold">
+                <Link href="/contact" className="font-semibold">
                   CONTACT
-                </a>
+                </Link>
               </li>
             </div>
           </ul>
