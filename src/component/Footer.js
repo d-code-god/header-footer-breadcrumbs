@@ -113,7 +113,7 @@ export const Footer = () => {
             </div>
             <div className="flex items-center gap-4 mb-4">
               {" "}
-              Link <FaAngleRight />{" "}
+             <FaAngleRight />{" "}
               <Link
                 href=""
                 className=" hover:border-b-2 hover:ease-linear hover:duration-300"
