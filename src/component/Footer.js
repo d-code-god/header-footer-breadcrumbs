@@ -98,7 +98,7 @@ export const Footer = () => {
         <div className="mb-10 md:mb-0">
           <h1 className="mb-4 text-2xl font-bold ">Courses</h1>
           <div className=" text-[14px] flex-col md:flex gap-6 md:gap-0">
-            <dvi>
+            
               <div className="flex items-center gap-4 mb-4 ">
                 <FaAngleRight />{" "}
                 <Link
@@ -109,41 +109,6 @@ export const Footer = () => {
                 </Link>
               </div>
 
-<<<<<<< HEAD
-              <div className="flex items-center gap-4 mb-4">
-                {" "}
-                <FaAngleRight />{" "}
-                <Link
-                  href=""
-                  className=" hover:border-b-2 hover:ease-linear hover:duration-300"
-                >
-                  DIGITAL MARKETING{" "}
-                </Link>
-              </div>
-            </dvi>
-
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                {" "}
-                <FaAngleRight />{" "}
-                <Link
-                  href=""
-                  className=" hover:border-b-2 hover:ease-linear hover:duration-300"
-                >
-                  DATA ANALYSIS
-                </Link>
-              </div>
-              <div className="flex items-center gap-4 mb-4">
-                {" "}
-                <FaAngleRight />{" "}
-                <Link
-                  href=""
-                  className=" hover:border-b-2 hover:ease-linear hover:duration-300"
-                >
-                  PHOTOGRAPHY
-                </Link>
-              </div>
-=======
             <div className="flex items-center gap-4 mb-4">
               {" "}
               <FaAngleRight />{" "}
@@ -173,7 +138,6 @@ export const Footer = () => {
               >
                 PHOTOGRAPHY
               </Link>
->>>>>>> 4fc81b063a76c65d0bee63fc2d991e1e54e38744
             </div>
           </div>
         </div>

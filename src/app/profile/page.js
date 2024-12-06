@@ -1,5 +1,5 @@
 import React from "react";
-import Breadcrumbs from "@/component/Breadcrumbs";
+import Breadcrumbs from "../../component/Breadcrumbs";
 
 function StudentProfile() {
   return (
