@@ -16,7 +16,7 @@ function ThemeSwitcher() {
 
   return (
     <div>
-      <button onClick={toggleTheme} className="p-2 border-2 border-[#1c1c9e] dark:border-gray-900">
+      <button onClick={toggleTheme} className="text-xl">
         {isDarkMode ? <IoMdSunny /> : <BsFillMoonStarsFill />}
       </button>
     </div>

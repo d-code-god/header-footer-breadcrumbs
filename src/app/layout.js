@@ -1,7 +1,7 @@
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import { ThemeProvider } from "next-themes";
-import "@/app/styles/globals.css";
+import "../app/styles/globals.css";
 
 export const metadata = {
   title: "Header and Footer Project",

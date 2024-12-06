@@ -1,134 +1,164 @@
 "use client";
 import Image from "next/image";
-import Logo from "@/app/public/assets/image/HONEY.png";
+import Logo from "../app/public/assets/image/HONEY.png";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
-import { IoLocation } from "react-icons/io5";
+import { FaEnvelope } from "react-icons/fa";
+import { IoHomeOutline, IoLocation } from "react-icons/io5";
 import { FaClock } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
+import React, { useEffect } from "react";
+import { useParams } from "next/navigation";
+import {
+  FaHome,
+  FaUser,
+  FaBook,
+  FaCalendar,
+  FaAddressCard,
+  FaPhone,
+} from "react-icons/fa";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+// import { useState } from "react";
+
 
 export const Header = () => {
+  const pathname = usePathname();
+  console.log(pathname);
+
+  const [isOpen, setIsOpen] = React.useState(false);
+
+ 
+  function getMenuClasses() {
+     let menuClasses = [];
+    if (isOpen) {
+      menuClasses = [
+        "top-[80px]",
+        "py-10",
+        "px-4",
+        "right-0",
+        "w-[70%]",
+        "h-screen",
+        "bg-[#1c1c9e]",
+        "dark:bg-black",
+        "dark:text-white",
+        "flex",
+        "flex-col",
+        "items-center",
+        "justify-center",
+        "text-white",
+        "z-50",
+        "duration-300",
+        "ease-in-out",
+        "transform",
+        "translate-x-0",
+        "absolute",
+        "fixed",
+        "text-[22px]",
+      ];
+   
+  } else {
+    menuClasses 
+    = ["hidden", "md:flex", "md:gap-8", "md:text-[15px]", "md:text-[#1c1c9e]", "md:uppercase", "md:relative", "md:dark:text-slate-300","md:items-center", "md:justify-center"];
+  }
+
+    return menuClasses.join(" ");
+  }
+
   return (
     <>
-      <div className="flex justify-between w-full  text-white bg-[#1c1c9e] dark:bg-gray-900 px-14 h-10">
-        <div className="flex gap-10 jutify-start">
-          <div className="flex items-center gap-2 hover:bg-white hover:text-[#1c1c9e] hover:duration-300 hover:ease-in-out hover:h-10 hover:px-4 dark:hover:bg-gray-400 dark:hover:text-gray-900">
+      <div className="justify-between w-full   bg-white dark:bg-black px-10 h-10 items-center border-b-[1px] hidden md:flex">
+        <div className="flex gap-10 jutify-start border-r-[1px] pr-6 h-10">
+          <div className="flex items-center gap-2 text-[#1c1c9e] dark:text-slate-300">
             <IoLocation />
             <small>123 Street, New York, USA</small>
           </div>
 
-          <div className="flex items-center gap-2 hover:bg-white hover:text-[#1c1c9e] hover:duration-300 hover:ease-in-out hover:h-10 hover:px-4 dark:hover:bg-gray-400 dark:hover:text-gray-900">
-            <FaClock />
-            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          <div className="flex items-center gap-2 text-[#1c1c9e] dark:text-slate-300">
+            <FaEnvelope />
+            <small>info@honeytreatacademy.com</small>
           </div>
         </div>
 
-        <div className="flex justify-end ">
-          <div className="flex items-center gap-2 hover:bg-white dark:hover:bg-gray-400 hover:text-[#1c1c9e] hover:duration-300 hover:ease-in-out hover:h-10 hover:px-4 pr-6 hover:mr-1 dark:hover:text-gray-900">
-            <IoMdCall />
-            <small>+012 345 6789</small>
-          </div>
+        <div className="flex justify-end gap-4 border-x-[1px] px-6 h-10 items-center text-[#1c1c9e] dark:text-slate-300 text-[15px]">
+          <Link href="">
+            <FaFacebookF />
+          </Link>
 
-          <div className="flex items-center gap-6 bg-white dark:bg-gray-400 text-[#1c1c9e] dark:text-gray-900  hover:h-10 ">
-            <div className="flex items-center justify-center w-6 h-8 pl-6 pr-6 border-r-2 border-[#1c1c9e] dark:border-gray-900">
-              <Link href="">
-                <FaFacebookF className="duration-300 hover:text-xl hover:ease-in-out" />
-              </Link>
-            </div>
+          <Link href="">
+            <FaTwitter />
+          </Link>
 
-            <div className="flex items-center justify-center w-6 h-8 pr-6 border-r-2 border-[#1c1c9e] dark:border-gray-900">
-              <Link href="">
-                <FaTwitter className="duration-300 hover:text-xl hover:ease-in-out" />
-              </Link>
-            </div>
+          <Link href="">
+            <FaLinkedinIn />
+          </Link>
 
-            <div className="flex items-center justify-center w-6 h-8 pr-6 border-r-2 border-[#1c1c9e] dark:border-gray-900">
-              <Link href="">
-                <FaLinkedinIn className="duration-300 hover:text-xl hover:ease-in-out" />
-              </Link>
-            </div>
-
-            <div className="flex items-center justify-center w-6 h-8 pr-6">
-              <Link href="" className="border-r-blue-200">
-                <FaSquareInstagram className="duration-300 hover:text-xl hover:ease-in-out" />
-              </Link>
-            </div>
-          </div>
+          <Link href="">
+            <FaSquareInstagram />
+          </Link>
         </div>
       </div>
 
       {/* Navbar Start */}
-      <nav className="flex justify-between w-full h-24 bg-white dark:bg-gray-400 text-[#1c1c9e] dark:text-gray-900 px-14 py-10 items-center sticky top-0 left-0 transition duration-300 ease-in-out z-50">
-        <div className="flex items-center">
-          <Image
-            src={Logo}
-            alt="logo"
-            width={150}
-            height={150}
-            // style={{ width: "auto", height: "auto" }}
-          />
-        </div>
+      <div className="navbar flex justify-between w-full bg-white dark:bg-black dark:text-slate-300 text-[#1c1c9e] items-center sticky top-0 left-0 z-50 md:px-10 px-10 h-20 drop-shadow">
+        <Image
+          src={Logo}
+          alt="logo"
+          width={120}
+          height={120}
+          className="justify-start items-start  md:w-30 w-24"
+        />
 
-        <div className="relative">
-          <ul className="flex justify-center gap-6">
-            <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e]  dark:hover:border-gray-900 hover:duration-300 hover:h-12">
-              <li>
-                <Link href="/" className="font-semibold">
-                  HOME
+        <div
+          className={getMenuClasses()}
+        >
+          <ul className="md:flex  justify-center items-center md:text-[14px] gap-10 md:gap-0">
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className={`hvr-underline-from-left group px-0 mx-4 relative md:mb-0 mb-10 `}
+              >
+                <Link
+                  href={item.link}
+                  className={` flex items-center uppercase z-20 gap-4 md:gap-2 ${
+                    pathname == item.link ? "active" : ""
+                  }`}
+                >
+                  {item.icon}
+                  {item.label}
                 </Link>
-              </li>
-            </div>
 
-            <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e] dark:hover:border-gray-900  hover:duration-300 hover:h-12">
-              <li>
-                <Link href="/about" className="font-semibold">
-                  ABOUT
-                </Link>
+                {/* <span className="absolute h-full bg-[#1c1c9e] dark:bg-black w-full hidden left-0 top-0 group-hover:flex active:flex rounded-t-2xl -z-10"></span> */}
               </li>
-            </div>
-
-            <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e]  dark:hover:border-gray-900 hover:duration-300 hover:h-12">
-              <li>
-                <Link href="/courses" className="font-semibold">
-                  COURSES
-                </Link>
-              </li>
-            </div>
-
-            <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e] dark:hover:border-gray-900 hover:duration-300 hover:h-12">
-              <li>
-                <Link href="/batches" className="font-semibold">
-                  BATCHES
-                </Link>
-              </li>
-            </div>
-
-            <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e] dark:hover:border-gray-900 hover:duration-300 hover:h-12">
-              <li>
-                <Link href="/profile" className="font-semibold">
-                  PROFILE
-                </Link>
-              </li>
-            </div>
-
-            <div className="flex items-center px-2 hover:border-b-2 hover:border-[#1c1c9e]  dark:hover:border-gray-900 hover:duration-300 hover:h-12">
-              <li>
-                <Link href="/contact" className="font-semibold">
-                  CONTACT
-                </Link>
-              </li>
-            </div>
+            ))}
           </ul>
         </div>
-        <ThemeSwitcher className="absolute right-0" />
-      </nav>
+        <ThemeSwitcher />
+
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-3xl text-[#1c1c9e] dark:text-slate-300"
+          >
+            <HiOutlineMenuAlt3 />
+          </button>
+        </div>
+      </div>
     </>
   );
 };
 
 export default Header;
+
+const menuItems = [
+  { label: "Home", link: "/", icon: <FaHome /> },
+  { label: "About", link: "/about", icon: <FaUser /> },
+  { label: "Courses", link: "/courses", icon: <FaBook /> },
+  { label: "Batches", link: "/batches", icon: <FaCalendar /> },
+  { label: "Profile", link: "/profile", icon: <FaAddressCard /> },
+  { label: "Contact", link: "/contact", icon: <FaPhone /> },
+];

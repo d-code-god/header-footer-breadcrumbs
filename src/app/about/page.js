@@ -1,4 +1,4 @@
-import Breadcrumbs from "@/component/Breadcrumbs";
+import Breadcrumbs from "../../component/Breadcrumbs";
 import React from "react";
 import Home from "../page";
 
