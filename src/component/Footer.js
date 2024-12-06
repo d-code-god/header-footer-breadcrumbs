@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../app/public/assets/image/HONEY.png";
+import Logo from "../app/public/assets/image/honey.png";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
