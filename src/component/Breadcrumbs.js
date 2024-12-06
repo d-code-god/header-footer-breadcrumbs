@@ -21,7 +21,7 @@ export const Breadcrumbs = ({ title }) => {
           backgroundSize: "cover",
         }}
         src={BCImage}
-        alt="Breadcrumbs"
+        alt="Breadcrumbs Image"
         className="bg-blend-multiply, bg-opacity-50"
       />
 

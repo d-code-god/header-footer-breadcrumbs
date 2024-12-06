@@ -25,16 +25,14 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 // import { useState } from "react";
 
-
 export const Header = () => {
   const pathname = usePathname();
-  console.log(pathname);
+  console.log(Image);
 
   const [isOpen, setIsOpen] = React.useState(false);
 
- 
   function getMenuClasses() {
-     let menuClasses = [];
+    let menuClasses = [];
     if (isOpen) {
       menuClasses = [
         "top-[80px]",
@@ -62,11 +60,20 @@ export const Header = () => {
         "fixed",
         "text-[22px]",
       ];
-   
-  } else {
-    menuClasses 
-    = ["hidden", "md:flex", "md:gap-8", "md:text-[15px]", "md:text-[#1c1c9e]", "md:uppercase", "md:relative", "md:dark:text-slate-300","md:items-center", "md:justify-center"];
-  }
+    } else {
+      menuClasses = [
+        "hidden",
+        "md:flex",
+        "md:gap-8",
+        "md:text-[15px]",
+        "md:text-[#1c1c9e]",
+        "md:uppercase",
+        "md:relative",
+        "md:dark:text-slate-300",
+        "md:items-center",
+        "md:justify-center",
+      ];
+    }
 
     return menuClasses.join(" ");
   }
@@ -115,9 +122,7 @@ export const Header = () => {
           className="justify-start items-start  md:w-30 w-24"
         />
 
-        <div
-          className={getMenuClasses()}
-        >
+        <div className={getMenuClasses()}>
           <ul className="md:flex  justify-center items-center md:text-[14px] gap-10 md:gap-0">
             {menuItems.map((item, index) => (
               <li
